@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { Component } from "react";
+import { render } from "react-dom";
+import HomePage from "./HomePage";
 
-const App = () => {
-  return <h1>Hello React Developers !!!</h1>;
-};
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-export default App;
+  render() {
+    return (
+      <div className="center">
+        <HomePage />
+      </div>
+    );
+  }
+}
+
+const appDiv = document.getElementById("app");
+render(<App />, appDiv);
